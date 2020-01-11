@@ -4,8 +4,9 @@ project(demo VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(demo1 demo1.c)
-add_test(test-demo1 demo1)
+set(srclist demo.c one-file-copy.c)
+add_executable(demo ${srclist})
+add_test(test-demo demo)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
